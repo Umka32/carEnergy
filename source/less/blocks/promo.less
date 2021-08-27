@@ -1,0 +1,77 @@
+.promo {
+  position: relative;
+
+  @media(max-width:@mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: rgba(104, 183, 56, 0.85);
+      background-image: url(../img/index-background-mobile.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 100%;
+      min-height: 302px;
+      z-index: -2;
+    }
+  }
+}
+
+.promo__wrapper{
+  width: 88%;
+  margin: 0 auto;
+  padding: 27px 0 0 0;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 62px 0 0 117px;
+  }
+}
+
+.promo__title {
+ color: @basic-white;
+ font: inherit;
+ font-size: 36px;
+ line-height: 36px;
+ text-align: center;
+ margin: 0 0 25px 0;
+ padding: 0;
+
+ @media (min-width: @tablet-width) {
+   color: @basic-black;
+   font-size: 60px;
+   line-height: 60px;
+   text-align: left;
+ }
+}
+
+.promo__slogan {
+  color: @basic-white;
+  font: inherit;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    color: @basic-black;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.promo__img {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.promo__button {
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    position: absolute;
+    top: 276px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
