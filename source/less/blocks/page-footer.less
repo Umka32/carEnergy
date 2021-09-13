@@ -27,6 +27,15 @@
   justify-content: center;
   align-self: center;
 
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
     padding: 0;
@@ -43,6 +52,19 @@
 .social__item {
   padding: 20px 0;
   box-sizing: border-box;
+}
+
+.social__link {
+  stroke: @special-dark-grey;
+
+  &:hover,
+  &:focus {
+    stroke: @basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__social {
@@ -73,6 +95,8 @@
   margin: 22px 0 0 0;
   width: 100%;
   box-sizing: border-box;
+  text-decoration: none;
+
 
   @media (min-width: @tablet-width) {
     justify-content: flex-end;

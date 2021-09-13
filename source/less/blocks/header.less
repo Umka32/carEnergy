@@ -23,20 +23,35 @@
   }
 }
 
-.page-header__logo-mobile {
-  display: none;
-  margin: 24px 0 24px 0;
-  justify-self: start;
+.page-header__logo {
   align-self: center;
-  @media (max-width: @mobile-width-only) {
-    display: block;
+  margin: 24px 0 24px 0;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
-.page-header__logo-main {
-  align-self: center;
+.page-header__name {
+  display: none;
   @media (max-width: @mobile-width-only) {
-    display: none;
+    justify-self: center;
+    align-self: center;
+    display: block;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
 
@@ -79,6 +94,15 @@
   padding: 22px 0 24px 0;
   border-top: 1px solid @special-light-grey;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 18px;
@@ -90,6 +114,24 @@
   @media (min-width: @desktop-width) {
     line-height: 30px;
     color: @basic-white;
+  }
+}
+
+.main-nav__item--active {
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @basic-green;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-color: @basic-white;
   }
 }
 

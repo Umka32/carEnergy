@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
   <script defer src="js/main.min.js"></script>
   <title>Cat Energy</title>
@@ -13,13 +14,15 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper wrapper">
-      <img class="page-header__logo-mobile" src="img/logo-mobile.svg" alt="Логотип компании Cat Energy">
-      <img class="page-header__logo-mobile" src="img/mobile-logo.svg" alt="">
-      <img class="page-header__logo-main" src="img/logo-tablet.svg" alt="Логотип компании Cat Energy">
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="page-header__logo" src="img/logo-mobile.svg" alt="Логотип компании Cat Energy">
+      </picture>
+      <img class="page-header__name" src="img/mobile-logo.svg" alt="">
       <button class="main-nav__toogle" aria-label="Открыть меню"></button>
       <nav class="main-nav main-nav--closed">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="">Главная</a></li>
+          <li class="main-nav__item main-nav__item--active"><a href="">Главная</a></li>
           <li class="main-nav__item"><a href="/catalog.html">Каталог продукции</a></li>
           <li class="main-nav__item"><a href="/form.html">Подбор программы</a></li>
         </ul>
@@ -180,7 +183,9 @@
       </div>
       <div class="page-footer__copyright">
         <p>HTML Academy</p>
-        <img src="img/Лого_html.svg" alt="Логотип Html Academy">
+        <svg width="27" height="34">
+          <use xlink:href="img/sprite.svg#icon-html"></use>
+        </svg>
       </div>
     </div>
   </footer>
