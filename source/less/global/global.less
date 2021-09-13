@@ -27,6 +27,15 @@ img {
   line-height: 18px;
   background-color: @basic-green;
   min-height: 40px;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-light-green;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .wrapper {
