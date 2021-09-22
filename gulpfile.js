@@ -108,9 +108,9 @@ exports.copy = copy;
 //Copy pages
 
 const copages = (done) => {
-  gulp.src("source/**/*.*",
+  gulp.src("build/**/*.*",
     {
-      base: "source"
+      base: "build"
     })
     .pipe(gulp.dest("."))
   done();
@@ -156,7 +156,12 @@ const watcher = () => {
 
 //Перенос для Pages в GitHab
 
-const pages = gulp.series(styles, copages);
+const pages = gulp.series(
+  html,
+  script,
+  styles,
+  copy,
+  copages);
 exports.pages = pages;
 
 //Build
